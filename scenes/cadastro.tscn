@@ -1,0 +1,128 @@
+[gd_scene load_steps=4 format=3 uid="uid://1qesqygaxud"]
+
+[ext_resource type="Script" path="res://scripts/cadastro.gd" id="1_bfvw1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvi3f"]
+bg_color = Color(0.000113828, 0.000113828, 0.000113828, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mc1xj"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Cadastro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bfvw1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0165846, 5.61927e-06, 0.124236, 1)
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.362771, 0.178287, 0.999999, 1)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 67.0
+grow_horizontal = 2
+text = "DOMINÓ DOS MÚLTIPLOS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Label" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+modulate = Color(0.266667, 1, 1, 1)
+layout_mode = 2
+text = "USUÁRIO"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/CenterContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/minimum_character_width = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_gvi3f")
+placeholder_text = "Insira seu CPF"
+max_length = 14
+secret = true
+secret_character = "X"
+
+[node name="Label2" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+modulate = Color(0.317647, 1, 1, 1)
+layout_mode = 2
+text = "SENHA"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit2" type="LineEdit" parent="MarginContainer/CenterContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/minimum_character_width = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_gvi3f")
+placeholder_text = "Insira sua senha"
+max_length = 8
+secret = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/MarginContainer3"]
+modulate = Color(0.211765, 1, 0.196078, 1)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mc1xj")
+text = "Cadastrar"
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/MarginContainer4"]
+modulate = Color(0.211765, 1, 0.196078, 1)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mc1xj")
+text = "Voltar para o login"
+
+[node name="Label3" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/MarginContainer3/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/MarginContainer4/Button" to="." method="_on_button_back_to_main_scene"]
