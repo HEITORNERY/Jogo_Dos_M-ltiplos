@@ -82,7 +82,6 @@ theme_override_constants/minimum_character_width = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_gvi3f")
 placeholder_text = "Insira seu CPF"
 max_length = 14
-secret = true
 secret_character = "X"
 
 [node name="Label2" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
