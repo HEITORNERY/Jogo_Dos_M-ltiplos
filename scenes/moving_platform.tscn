@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bnaqgn20gfi7m" path="res://Tiles/1 - Grassland/Terrain (16 x 16).png" id="1_u0a3v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rnlfy"]
-size = Vector2(48, 8)
+size = Vector2(48, 4)
 
 [node name="Moving_Platform" type="Node2D"]
 position = Vector2(40, 16)
