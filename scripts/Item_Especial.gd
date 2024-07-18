@@ -5,7 +5,7 @@ func _physics_process(delta):
 		$".".visible = true
 	else:
 		$".".visible = false
-
+	
 func _on_pressed():
 	var Time_and_data = Time.get_datetime_dict_from_system()
 	var hora1 = str(Time_and_data.get("hour"))

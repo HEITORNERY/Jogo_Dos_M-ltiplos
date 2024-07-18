@@ -55,7 +55,7 @@ func validar_cpf(cpf_validado) -> bool:
 					segundo_digito_verificador = 0
 			if segundo_digito_verificador == numeros_do_cpf[10]:
 				# é um cpf válido
-				$MarginContainer/CenterContainer/VBoxContainer/Label3.text = ""
+				$MarginContainer/CenterContainer/VBoxContainer/Label3.text = "CPF Válido, seu cadastro foi bem sucedido"
 				return true
 			else:
 				# reprovou na segunda verificação
