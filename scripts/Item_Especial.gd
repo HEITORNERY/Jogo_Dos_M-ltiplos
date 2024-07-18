@@ -1,5 +1,6 @@
 extends Button
-
+func _ready():
+	Global.moedas = 0
 func _physics_process(delta):
 	if Global.moedas != 0:
 		$".".visible = true
