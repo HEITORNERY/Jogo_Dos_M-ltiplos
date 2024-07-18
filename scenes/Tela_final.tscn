@@ -40,13 +40,11 @@ layout_mode = 2
 [node name="Button" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 visible = false
 layout_mode = 2
-disabled = true
 text = "Tentar Novamente"
 
 [node name="Button2" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 visible = false
 layout_mode = 2
-disabled = true
 text = "Voltar para o mundo"
 
 [node name="Label4" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
@@ -62,3 +60,13 @@ text = "Horário de saída"
 
 [node name="Label3" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="Label6" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Data de entrada no jogo"
+
+[node name="Label7" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Button" to="." method="_on_button_tentar_novamente_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Button2" to="." method="_on_button_voltar_pro_mundo_pressed"]

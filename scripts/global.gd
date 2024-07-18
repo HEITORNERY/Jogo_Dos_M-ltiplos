@@ -10,3 +10,6 @@ var moedas = 0
 var hora = ""
 var minuto = ""
 var segundo = ""
+
+var erro : bool
+var sucesso : bool

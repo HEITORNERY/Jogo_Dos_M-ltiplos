@@ -373,6 +373,13 @@ offset_bottom = 15.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Button" type="Button" parent="ParallaxBackground"]
+offset_left = 524.0
+offset_top = 2.0
+offset_right = 638.0
+offset_bottom = 33.0
+text = "Back to Menu"
+
 [node name="Moving_Platform" parent="." instance=ExtResource("11_88ic3")]
 position = Vector2(424, 320)
 
@@ -406,5 +413,6 @@ texture = ExtResource("19_n87vy")
 region_enabled = true
 region_rect = Rect2(0, 48, 16, 16)
 
+[connection signal="pressed" from="ParallaxBackground/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="Restart" to="Restart" method="_on_body_entered"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

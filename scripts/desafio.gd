@@ -100,11 +100,14 @@ func _on_button_15_pressed():
 func _on_button_16_pressed():
 	string_do_botão.append($Button16.text)
 	$Timer.start()
+	Global.sucesso = true
+	Global.erro = false
 func  _physics_process(_delta):
 	if Input.is_action_just_pressed("left_click") and string_do_botão.pop_front() == "": 
 		print(string_do_botão)
 		$Player.queue_free()
-
-
+		Global.erro = true
+		Global.sucesso = false
+		get_tree().change_scene_to_file("res://scenes/Tela_final.tscn")
 func _on_timer_timeout():
 	get_tree().change_scene_to_file("res://scenes/Tela_final.tscn")

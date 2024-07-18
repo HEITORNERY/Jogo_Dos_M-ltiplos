@@ -14,5 +14,6 @@ func _on_pressed():
 	Global.hora = hora1
 	Global.segundo = segundo1
 	Global.minuto = minuto1
+	Global.moedas -= 1
 	get_tree().change_scene_to_file("res://scenes/desafio.tscn")
 	
