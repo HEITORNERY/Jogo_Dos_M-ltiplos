@@ -397,6 +397,7 @@ offset_left = 747.0
 offset_top = 308.0
 offset_right = 755.0
 offset_bottom = 316.0
+mouse_default_cursor_shape = 2
 script = ExtResource("18_ef1ql")
 
 [node name="Sprite2D" type="Sprite2D" parent="Button"]

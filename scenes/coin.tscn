@@ -111,6 +111,6 @@ shape = SubResource("CapsuleShape2D_0mlwk")
 sprite_frames = SubResource("SpriteFrames_2j3on")
 animation = &"coin_rotation"
 autoplay = "coin_rotation"
-frame_progress = 0.595382
+frame_progress = 0.227399
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

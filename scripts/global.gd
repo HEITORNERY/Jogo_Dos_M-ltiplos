@@ -6,3 +6,7 @@ var Logins_Salvos : Array = []
 
 # variável para armazenar o valor das moedas coletadas, pois sem elas não é possível liberar a fase desafio
 var moedas = 0
+
+var hora = ""
+var minuto = ""
+var segundo = ""
