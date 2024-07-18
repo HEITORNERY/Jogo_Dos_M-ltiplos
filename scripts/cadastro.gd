@@ -18,7 +18,6 @@ func _on_button_pressed():
 		var minha_conta = Conta.new()
 		minha_conta.dados_do_usuario(CPF, Senha)
 		Global.Logins_Salvos.append(minha_conta)
-		print(Global.Logins_Salvos)
 	
 func _on_button_back_to_main_scene():
 	get_tree().change_scene_to_file("res://scenes/login_scene.tscn")
